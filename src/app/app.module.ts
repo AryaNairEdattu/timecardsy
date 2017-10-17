@@ -6,16 +6,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TimecardComponent } from './timecard/timecard.component';
 import { ProjectComponent } from './project/project.component';
-
+import { AddprobtnComponent } from './addprobtn/addprobtn.component';
+import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TimecardComponent,
-    ProjectComponent
+    ProjectComponent,
+    AddprobtnComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpModule,HttpClientModule,HttpModule,
     FormsModule,
     RouterModule.forRoot([
       
@@ -26,6 +29,9 @@ import { ProjectComponent } from './project/project.component';
       {
         path:'project',
         component:ProjectComponent
+      },{
+        path:'addprobtn',
+        component:AddprobtnComponent
       }
     ])
   ],
